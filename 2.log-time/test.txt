@@ -1,0 +1,12 @@
+hadoop jar ~/hadoop-3.3.6/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+-input /user/ubuntu/input/access.log \
+-output /user/ubuntu/output/log-time \
+-mapper 'python3 /home/ubuntu/dmf/hadoop/2.log-time/mapper.py' \
+-reducer 'python3 /home/ubuntu/dmf/hadoop/2.log-time/reducer.py'
+
+
+hadoop jar ~/hadoop-3.3.6/share/hadoop/tools/lib/hadoop-streaming-3.3.6.jar \
+-input /user/ubuntu/input/u.data \
+-output /user/ubuntu/output/movie-avg \
+-mapper 'python3 /home/ubuntu/dmf/hadoop/1.movie-rate-avg/mapper.py' \
+-reducer 'python3 /home/ubuntu/dmf/hadoop/1.movie-rate-avg/reducer.py'
